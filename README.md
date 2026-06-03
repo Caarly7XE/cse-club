@@ -1,16 +1,45 @@
-# React + Vite
+# Club Science et Environnement (CSE)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet développé avec React et Vite dans le cadre du module Développement Web.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Le Club Science et Environnement (CSE) est un club universitaire de la Faculté des Sciences Ben M'Sik. Ce site web présente les activités, les événements, les membres et les informations du club.
 
-## React Compiler
+## Fonctionnalités
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Navigation avec React Router
+- Page Présentation
+- Page Membres
+- Page Événements
+- Formulaire d'adhésion
+- Page Contact
+- Dark Mode
+- Navigation dynamique vers les événements
+- Design responsive
 
-## Expanding the ESLint configuration
+## Technologies utilisées
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript (JSX)
+- CSS3
+- React Router DOM
+
+## Lancement du projet
+
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+Lancer le projet :
+
+```bash
+npm run dev
+```
+
+## Auteur
+
+GitHub : Caarly7XE
