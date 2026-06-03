@@ -1,0 +1,617 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #1a73e8;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d47a1;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-area h1 {
+    color: #2e7d32; /* Eco-friendly green accent */
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo-area p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #555;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.main-nav a.active, .main-nav a:hover {
+    color: #2e7d32;
+    border-bottom: 2px solid #2e7d32;
+}
+
+/* Layout Structure */
+.main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Main Content Area */
+.content-area {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.presentation-card h2 {
+    color: #222;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.presentation-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #2e7d32;
+}
+
+
+
+
+.intro-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.presentation-card p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Objectives Section */
+.objectives-section {
+    margin-top: 2.5rem;
+}
+
+.objectives-section h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.objectives-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.objectives-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.objectives-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.sub-heading {
+    margin-top: 1.5rem;
+    color: #444;
+}
+
+.sub-list li::before {
+    content: "•";
+    color: #0288d1; /* Secondary accent color */
+}
+
+/* Sidebar Widget Styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.widget {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.widget h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2e7d32;
+    padding-left: 0.5rem;
+}
+
+.events-list {
+    list-style: none;
+}
+
+.events-list li {
+    border-bottom: 1px solid #eee;
+    padding: 0.75rem 0;
+}
+
+.events-list li:last-child {
+    border-bottom: none;
+}
+
+.events-list a {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+.events-list a strong {
+    color: #2e7d32;
+    font-size: 0.95rem;
+}
+
+.events-list a span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.events-list a:hover strong {
+    color: #0d47a1;
+}
+
+.journal-widget {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+}
+
+.journal-widget p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #388e3c;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #212121;
+    color: #bbb;
+    padding: 3rem 0 1rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2rem;
+}
+
+.footer-grid h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+}
+/* --- Members Page Specific Styling --- */
+
+.members-intro {
+    margin-bottom: 2.5rem;
+}
+
+.members-intro p {
+    text-align: justify;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Grid setup for 2 columns on desktop, adapts automatically */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Make the President stand out by spanning across full width if possible */
+.member-card.main-leader {
+    grid-column: 1 / -1;
+    background-color: #f1f8e9;
+    border: 1px solid #c8e6c9;
+}
+
+.member-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+}
+
+/* Placeholder Circle Icon for Member Photo */
+.member-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+}
+/* Assure que la photo s'adapte parfaitement au cercle sans se déformer */
+.img-avatar {
+    object-fit: cover;
+    padding: 0; /* Enlève les espacements internes pour que la photo prenne tout le rond */
+}
+
+.member-card.main-leader .member-avatar {
+    background-color: #1b5e20;
+}
+
+.member-card h3 {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.25rem;
+}
+
+.member-card .role {
+    font-size: 0.9rem;
+    color: #1e5f41;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-card .email {
+    font-size: 0.85rem;
+    word-break: break-all;
+    color: #1a73e8;
+}
+.hero-video-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-video-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+}
+/* =============================================
+   MOBILE — max-width: 640px
+   ============================================= */
+@media (max-width: 640px) {
+
+    /* Show hamburger, hide desktop nav */
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1rem);
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 2px solid #2e7d32;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        border-radius: 0 0 8px 8px;
+        z-index: 999;
+    }
+
+    .main-nav.nav-open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem 0;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 1rem;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    .main-nav a.active,
+    .main-nav a:hover {
+        border-bottom: none;
+        border-left: 3px solid #2e7d32;
+        background-color: #f1f8e9;
+        color: #2e7d32;
+    }
+
+    /* Layout */
+    .main-layout {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    /* Content */
+    .content-area {
+        padding: 1.25rem;
+    }
+
+    /* Events — stack images on mobile */
+    .event-images-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Members */
+    .members-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .member-card.main-leader {
+        grid-column: 1 / -1;
+    }
+
+    /* Sidebar stacks */
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Buttons full width on very small screens */
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* =============================================
+   VERY SMALL — max-width: 380px
+   ============================================= */
+@media (max-width: 380px) {
+    .logo-area h1 {
+        font-size: 1rem;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-area {
+        padding: 1rem;
+    }
+}
+/* =============================================
+   TABLET — max-width: 900px
+   ============================================= */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.member-card {
+  scroll-margin-top: 100px;
+}
+.theme-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.theme-btn:hover {
+  opacity: 0.9;
+}
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .content-area,
+.dark-mode .widget,
+.dark-mode .member-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .main-header {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .main-footer {
+  background-color: #0d0d0d;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a,
+.dark-mode span,
+.dark-mode strong {
+  color: white;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
